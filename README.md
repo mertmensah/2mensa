@@ -1,82 +1,32 @@
-# 2mensa
+# Play 2mensa
 
-2mensa is a GitHub Pages-ready frontend for brain teaser games.
+Live experience: https://mertmensah.github.io/2mensa/
 
-## Current Modules
+## What Is 2mensa
 
-- Sudoku:
-  - Four levels: Novice, Medium, Hard, Mensa
-  - Unique-solution puzzle generation
-  - Notes mode, timer, mistakes, completion tracking
-  - Keyboard navigation and auto save/resume
-- Speed Trivia:
-  - 60-second rounds
-  - Mixed category questions
-  - Score tracking per round
-- Logic Grid:
-  - Multi-difficulty clue-based deduction puzzles
-  - Rotating puzzle sets per difficulty
-  - Constraint and uniqueness validation
-  - Solve and play tracking
-- Sequence Sprint:
-  - Multi-difficulty numeric pattern rounds
-  - Timed 8-question sessions
-  - Best score and streak tracking
-- Raven Matrix:
-  - Multi-difficulty visual matrix reasoning rounds
-  - Timed 8-question sessions
-  - Best score and streak tracking
-- Spatial Rotation Drill:
-  - Multi-difficulty rotation matching rounds
-  - Click-only visual choice gameplay
-  - Best score and streak tracking
+2mensa is a fast, modern brain training arena built for curious minds and competitive thinkers. It combines logic, pattern recognition, spatial reasoning, and speed under pressure into one clean experience you can jump into in seconds.
 
-## Platform Features
+## Why People Stay
 
-- Landing dashboard with persistent cross-module stats
-- Achievement chips and daily streak tracking
-- Expandable left navigation
-- Optional sound feedback toggle
-- Dedicated settings page for accessibility preferences
-- Mobile-friendly controls and focus visibility improvements
+- Short, high-focus rounds that fit into any schedule
+- Multiple game types that challenge different thinking styles
+- Difficulty tiers that scale from warm-up to elite challenge
+- Progress tracking that rewards consistency and sharp execution
+- Smooth experience on desktop and mobile
 
-## Roadmap Inventory
+## Game Lineup
 
-- See `MENSA_GAME_INVENTORY.md` for missing mensa-style game categories and build priority.
+- Sudoku: Solve classic grids across four challenge levels
+- Speed Trivia: Race the clock through rapid-fire knowledge rounds
+- Logic Grid: Decode clue sets and lock in the only valid answer
+- Sequence Sprint: Spot the rule behind each number pattern
+- Raven Matrix: Complete visual logic matrices under time pressure
+- Spatial Rotation Drill: Identify true rotations and reject visual traps
 
-## Local Preview
+## Built For Momentum
 
-Open `index.html` directly in a browser, or use a static server.
+2mensa is designed to keep you in flow. Your wins, streaks, and personal bests are always visible, so every session feels connected to your long-term progress.
 
-No-terminal option (Windows):
+## The Mission
 
-1. Double-click `LAUNCH_2MENSA.bat`
-2. Your browser will open automatically at `http://localhost:5500`
-3. When finished, double-click `STOP_2MENSA.bat`
-
-PowerShell quick start:
-
-```powershell
-Set-Location mmensa
-python -m http.server 5500
-```
-
-Then open `http://localhost:5500`.
-
-## Deploy To GitHub Pages
-
-This repository includes an automatic deployment workflow:
-
-- `.github/workflows/mmensa-pages.yml`
-- `DEPLOY_MVP.md`
-
-Steps:
-
-1. Push to `main`.
-2. In GitHub, open **Settings > Pages**.
-3. Set source to `GitHub Actions`.
-4. The workflow deploys the `mmensa` directory to Pages.
-
-Your site will be available at:
-
-`https://<your-username>.github.io/<your-repo>/`
+Train the habits behind high-level thinking: focus, composure, precision, and speed. Whether you play for five minutes or fifty, the goal is the same: leave sharper than you arrived.
