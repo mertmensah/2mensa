@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2mensa Logic Grid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="logic-grid.css" />
+</head>
+<body>
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-wrap">
+        <button class="icon-btn" id="toggleSidebar" aria-label="Toggle navigation">☰</button>
+        <h1 class="brand">2mensa</h1>
+        <button class="icon-btn mini" id="audioToggle" aria-label="Toggle sound" title="Toggle sound">🔊</button>
+      </div>
+
+      <nav class="menu">
+        <a class="menu-item" href="../index.html">Home</a>
+        <a class="menu-item" href="../settings.html">Settings</a>
+        <button class="menu-item expand-toggle" id="modulesToggle" aria-expanded="true">Modules ▾</button>
+        <div class="submenu" id="modulesMenu">
+          <a class="submenu-item" href="sudoku.html">Sudoku</a>
+          <a class="submenu-item" href="trivia.html">Speed Trivia</a>
+          <a class="submenu-item" href="logic-grid.html">Logic Grid</a>
+          <a class="submenu-item" href="sequence-sprint.html">Sequence Sprint</a>
+          <a class="submenu-item" href="raven-matrix.html">Raven Matrix</a>
+          <a class="submenu-item" href="spatial-rotation.html">Spatial Rotation</a>
+          <span class="submenu-item disabled">Pattern Recall (soon)</span>
+        </div>
+      </nav>
+
+      <footer class="sidebar-foot">Reason from constraints.</footer>
+    </aside>
+
+    <main class="main-content">
+      <header class="hero">
+        <p class="eyebrow">Module 03</p>
+        <h2>Logic Grid</h2>
+        <p>Use clues to match each person with one item from each category. Every option is used exactly once.</p>
+      </header>
+
+      <section class="logic-controls">
+        <label for="logicDifficulty">Difficulty</label>
+        <select id="logicDifficulty">
+          <option value="novice">Novice</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+          <option value="mensa">Mensa</option>
+        </select>
+        <button id="newLogicBtn" class="game-btn">New Puzzle</button>
+      </section>
+
+      <section class="logic-layout">
+        <article class="logic-card">
+          <h3>Clues</h3>
+          <ol class="clues" id="clueList"></ol>
+        </article>
+
+        <article class="logic-card">
+          <h3>Assignments</h3>
+          <div class="logic-table" id="logicTable" role="table" aria-label="Logic grid assignment table"></div>
+
+          <div class="logic-actions">
+            <button id="checkLogicBtn" class="game-btn">Check Solution</button>
+            <button id="resetLogicBtn" class="game-btn ghost">Reset</button>
+          </div>
+
+          <p id="logicStatus" class="status" aria-live="polite">Fill all fields and check your deduction.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="../app.js"></script>
+  <script type="module" src="logic-grid.js"></script>
+</body>
+</html>

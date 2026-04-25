@@ -1,0 +1,148 @@
+.raven-controls {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 253, 248, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.raven-controls label {
+  font-weight: 700;
+}
+
+.raven-controls select {
+  border-radius: 10px;
+  border: 1px solid #c9c4b8;
+  background: #fffdf8;
+  color: var(--ink);
+  padding: 10px 12px;
+  font-family: inherit;
+  min-height: 42px;
+}
+
+.raven-panel {
+  margin-top: 14px;
+  background: rgba(255, 253, 248, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--tile-shadow);
+  padding: clamp(14px, 2.4vw, 24px);
+  max-width: 900px;
+}
+
+.raven-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.raven-meta p {
+  margin: 0;
+  padding: 8px 12px;
+  border: 1px solid #d8d2c6;
+  border-radius: 10px;
+  background: #faf7f0;
+}
+
+.raven-meta span {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #616c67;
+}
+
+.raven-meta strong {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.15rem;
+}
+
+.raven-matrix {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(72px, 120px));
+  gap: 8px;
+}
+
+.matrix-cell {
+  min-height: 84px;
+  border: 1px solid #cfc9bc;
+  border-radius: 12px;
+  background: #fffdf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+}
+
+.matrix-cell.missing {
+  background: #f2eee4;
+  border-style: dashed;
+  color: #8f8a7e;
+  font-size: 1.4rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.raven-subtitle {
+  margin: 18px 0 10px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.raven-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(90px, 140px));
+  gap: 10px;
+}
+
+.raven-option {
+  border: 1px solid #cbc5b8;
+  border-radius: 12px;
+  background: #fffdf8;
+  min-height: 84px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.raven-option:hover:not([disabled]) {
+  border-color: #b2aba0;
+}
+
+.raven-option.correct {
+  background: #d9f5e9;
+  border-color: #80cda9;
+}
+
+.raven-option.wrong {
+  background: #ffd9cc;
+  border-color: #e19f88;
+}
+
+.raven-glyph {
+  font-size: 1.2rem;
+  line-height: 1;
+  display: inline-block;
+}
+
+.raven-glyph.color-0 { color: #ff5d2e; }
+.raven-glyph.color-1 { color: #0aa6a6; }
+.raven-glyph.color-2 { color: #2f5cc9; }
+.raven-glyph.color-3 { color: #6c3bb8; }
+
+@media (max-width: 760px) {
+  .raven-matrix {
+    grid-template-columns: repeat(3, minmax(64px, 1fr));
+  }
+
+  .raven-options {
+    grid-template-columns: repeat(2, minmax(90px, 1fr));
+  }
+}

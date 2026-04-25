@@ -1,0 +1,119 @@
+.rotation-controls {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 253, 248, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.rotation-controls label {
+  font-weight: 700;
+}
+
+.rotation-controls select {
+  border-radius: 10px;
+  border: 1px solid #c9c4b8;
+  background: #fffdf8;
+  color: var(--ink);
+  padding: 10px 12px;
+  font-family: inherit;
+  min-height: 42px;
+}
+
+.rotation-panel {
+  margin-top: 14px;
+  background: rgba(255, 253, 248, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--tile-shadow);
+  padding: clamp(14px, 2.4vw, 24px);
+  max-width: 920px;
+}
+
+.rotation-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.rotation-meta p {
+  margin: 0;
+  padding: 8px 12px;
+  border: 1px solid #d8d2c6;
+  border-radius: 10px;
+  background: #faf7f0;
+}
+
+.rotation-meta span {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #616c67;
+}
+
+.rotation-meta strong {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.15rem;
+}
+
+.rotation-target-wrap {
+  margin-top: 16px;
+}
+
+.rotation-label {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.rotation-target,
+.rotation-option {
+  background: #fffdf8;
+  border: 1px solid #cbc5b8;
+  border-radius: 14px;
+  min-height: 132px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.rotation-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 10px;
+}
+
+.rotation-option {
+  cursor: pointer;
+}
+
+.rotation-option:hover:not([disabled]) {
+  border-color: #b2aba0;
+}
+
+.rotation-option.correct {
+  background: #d9f5e9;
+  border-color: #80cda9;
+}
+
+.rotation-option.wrong {
+  background: #ffd9cc;
+  border-color: #e19f88;
+}
+
+.rotation-canvas {
+  width: 110px;
+  height: 110px;
+}
+
+@media (max-width: 640px) {
+  .rotation-options {
+    grid-template-columns: 1fr;
+  }
+}

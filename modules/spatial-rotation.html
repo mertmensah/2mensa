@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2mensa Spatial Rotation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="spatial-rotation.css" />
+</head>
+<body>
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-wrap">
+        <button class="icon-btn" id="toggleSidebar" aria-label="Toggle navigation">☰</button>
+        <h1 class="brand">2mensa</h1>
+        <button class="icon-btn mini" id="audioToggle" aria-label="Toggle sound" title="Toggle sound">🔊</button>
+      </div>
+
+      <nav class="menu">
+        <a class="menu-item" href="../index.html">Home</a>
+        <a class="menu-item" href="../settings.html">Settings</a>
+        <button class="menu-item expand-toggle" id="modulesToggle" aria-expanded="true">Modules ▾</button>
+        <div class="submenu" id="modulesMenu">
+          <a class="submenu-item" href="sudoku.html">Sudoku</a>
+          <a class="submenu-item" href="trivia.html">Speed Trivia</a>
+          <a class="submenu-item" href="logic-grid.html">Logic Grid</a>
+          <a class="submenu-item" href="sequence-sprint.html">Sequence Sprint</a>
+          <a class="submenu-item" href="raven-matrix.html">Raven Matrix</a>
+          <a class="submenu-item" href="spatial-rotation.html">Spatial Rotation</a>
+          <span class="submenu-item disabled">Pattern Recall (soon)</span>
+        </div>
+      </nav>
+
+      <footer class="sidebar-foot">See the object from every side.</footer>
+    </aside>
+
+    <main class="main-content">
+      <header class="hero">
+        <p class="eyebrow">Module 06</p>
+        <h2>Spatial Rotation Drill</h2>
+        <p>Match the target shape to its rotated twin. Beware mirrored and angle-shift distractors.</p>
+      </header>
+
+      <section class="rotation-controls">
+        <label for="rotationDifficulty">Difficulty</label>
+        <select id="rotationDifficulty">
+          <option value="novice">Novice</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+          <option value="mensa">Mensa</option>
+        </select>
+        <button id="startRotationBtn" class="game-btn">Start Round</button>
+        <button id="nextRotationBtn" class="game-btn ghost" disabled>Next</button>
+      </section>
+
+      <section class="rotation-panel">
+        <div class="rotation-meta">
+          <p><span>Time</span><strong id="rotationTime">70</strong>s</p>
+          <p><span>Score</span><strong id="rotationScore">0</strong></p>
+          <p><span>Question</span><strong id="rotationIndex">1/8</strong></p>
+          <p><span>Streak</span><strong id="rotationStreak">0</strong></p>
+        </div>
+
+        <div class="rotation-target-wrap">
+          <p class="rotation-label">Target</p>
+          <div id="rotationTarget" class="rotation-target"></div>
+        </div>
+
+        <p class="rotation-label">Choose the rotated match</p>
+        <div id="rotationOptions" class="rotation-options"></div>
+
+        <p id="rotationStatus" class="status" aria-live="polite">Tap Start Round to begin.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="../app.js"></script>
+  <script type="module" src="spatial-rotation.js"></script>
+</body>
+</html>

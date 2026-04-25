@@ -1,0 +1,116 @@
+.logic-controls {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 253, 248, 0.9);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.logic-controls label {
+  font-weight: 700;
+}
+
+.logic-controls select {
+  border-radius: 10px;
+  border: 1px solid #c9c4b8;
+  background: #fffdf8;
+  color: var(--ink);
+  padding: 10px 12px;
+  font-family: inherit;
+  min-height: 42px;
+}
+
+.logic-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) minmax(320px, 640px);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.logic-card {
+  background: rgba(255, 253, 248, 0.93);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--tile-shadow);
+  padding: 14px;
+}
+
+.logic-card h3 {
+  margin: 0 0 10px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.clues {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  color: #424c47;
+}
+
+.logic-table {
+  display: grid;
+  gap: 8px;
+}
+
+.logic-header,
+.logic-row {
+  display: grid;
+  grid-template-columns: minmax(70px, 100px) 1fr 1fr;
+  gap: 8px;
+  align-items: center;
+}
+
+.logic-header {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #65706b;
+}
+
+.logic-row span {
+  font-weight: 700;
+}
+
+.logic-row select {
+  border-radius: 10px;
+  border: 1px solid #c9c4b8;
+  background: #fffdf8;
+  color: var(--ink);
+  padding: 9px 10px;
+  font-family: inherit;
+}
+
+.logic-row select.invalid {
+  border-color: #d56f4b;
+  background: #ffe7dc;
+}
+
+.logic-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .logic-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .logic-header,
+  .logic-row {
+    grid-template-columns: minmax(58px, 70px) 1fr 1fr;
+    gap: 6px;
+  }
+
+  .logic-row select {
+    padding: 10px 8px;
+    min-height: 40px;
+  }
+}
