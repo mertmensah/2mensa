@@ -96,8 +96,8 @@ function renderShape(container, points, rotationDeg = 0) {
     rect.setAttribute("width", "22");
     rect.setAttribute("height", "22");
     rect.setAttribute("rx", "5");
-    rect.setAttribute("fill", "#0aa6a6");
-    rect.setAttribute("stroke", "#1f2522");
+    rect.setAttribute("fill", "#58a6ff");
+    rect.setAttribute("stroke", "#173f74");
     rect.setAttribute("stroke-width", "2");
     svg.appendChild(rect);
   });

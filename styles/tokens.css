@@ -1,0 +1,14 @@
+:root {
+  --bg: #eef5ff;
+  --ink: #11243d;
+  --panel: #f8fbff;
+  --panel-strong: #ffffff;
+  --line: #c9d9ee;
+  --accent: #3a78da;
+  --accent-2: #58a6ff;
+  --accent-ink: #0c2140;
+  --muted: #59708f;
+  --success-bg: #d7efe4;
+  --success-ink: #1e5f44;
+  --tile-shadow: 0 16px 42px rgba(23, 52, 92, 0.12);
+}

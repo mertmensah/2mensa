@@ -1,0 +1,214 @@
+.icon-btn {
+  border: 1px solid var(--line);
+  background: var(--panel-strong);
+  color: var(--accent-ink);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+#toggleSidebar {
+  display: none;
+}
+
+.icon-btn.mini {
+  width: 36px;
+  height: 36px;
+  margin-left: auto;
+  font-size: 0.95rem;
+}
+
+.mobile-nav-trigger {
+  display: none;
+}
+
+.nav-backdrop {
+  display: none;
+}
+
+.menu {
+  display: grid;
+  gap: 6px;
+}
+
+.menu-item,
+.submenu-item {
+  font-family: inherit;
+  text-decoration: none;
+  color: var(--ink);
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 0.98rem;
+}
+
+.menu-item {
+  cursor: pointer;
+}
+
+.menu-item:hover,
+.submenu-item:hover {
+  background: #e8f1ff;
+}
+
+.menu-item.active {
+  background: #dcebff;
+  color: #173f74;
+  font-weight: 700;
+}
+
+.submenu {
+  display: grid;
+  gap: 4px;
+  padding-left: 8px;
+  max-height: 220px;
+  overflow: hidden;
+  transition: max-height 220ms ease;
+}
+
+.submenu.hidden {
+  max-height: 0;
+}
+
+.submenu-item.disabled {
+  color: var(--muted);
+  cursor: not-allowed;
+}
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.module-tile {
+  background: linear-gradient(165deg, var(--panel-strong), #f2f8ff);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: var(--tile-shadow);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateY(8px);
+  opacity: 0;
+  animation: tile-reveal 420ms ease forwards;
+}
+
+.module-tile:nth-child(2) {
+  animation-delay: 80ms;
+}
+
+.module-tile:nth-child(3) {
+  animation-delay: 140ms;
+}
+
+.tile-tag {
+  margin: 0;
+  color: #2f68bf;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.module-tile h3 {
+  margin: 10px 0 8px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.4rem;
+}
+
+.module-tile p {
+  margin: 0;
+  color: #39577d;
+  line-height: 1.5;
+}
+
+.tile-link,
+.game-btn {
+  margin-top: 16px;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  min-height: 42px;
+}
+
+.tile-link:hover,
+.game-btn:hover {
+  filter: brightness(1.03);
+}
+
+.tile-link.ghost,
+.game-btn.ghost {
+  background: #e4edfb;
+  color: #2f4f78;
+  border-color: #bfd3ef;
+}
+
+.status {
+  margin-top: 14px;
+  font-weight: 600;
+  color: #2f4c70;
+}
+
+@media (max-width: 860px) {
+  #toggleSidebar {
+    display: inline-flex;
+  }
+
+  .icon-btn.mini {
+    display: inline-flex;
+    margin-left: 0;
+  }
+
+  .mobile-nav-trigger {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 50;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--line);
+    background: rgba(248, 251, 255, 0.96);
+    color: var(--accent-ink);
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+  }
+
+  .nav-backdrop {
+    position: fixed;
+    inset: 0;
+    display: block;
+    background: rgba(12, 33, 64, 0.26);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 220ms ease;
+    z-index: 30;
+  }
+
+  body.nav-open {
+    overflow: hidden;
+  }
+
+  body.nav-open .nav-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

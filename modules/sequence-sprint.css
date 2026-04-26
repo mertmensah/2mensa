@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 253, 248, 0.9);
+  background: rgba(248, 251, 255, 0.92);
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 12px;
@@ -16,8 +16,8 @@
 
 .sequence-controls select {
   border-radius: 10px;
-  border: 1px solid #c9c4b8;
-  background: #fffdf8;
+  border: 1px solid #bfd2ed;
+  background: var(--panel-strong);
   color: var(--ink);
   padding: 10px 12px;
   font-family: inherit;
@@ -26,7 +26,7 @@
 
 .sequence-panel {
   margin-top: 14px;
-  background: rgba(255, 253, 248, 0.92);
+  background: rgba(255, 255, 255, 0.93);
   border: 1px solid var(--line);
   border-radius: 18px;
   box-shadow: var(--tile-shadow);
@@ -43,9 +43,9 @@
 .sequence-meta p {
   margin: 0;
   padding: 8px 12px;
-  border: 1px solid #d8d2c6;
+  border: 1px solid #c4d5ed;
   border-radius: 10px;
-  background: #faf7f0;
+  background: #eef5ff;
 }
 
 .sequence-meta span {
@@ -53,7 +53,7 @@
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #616c67;
+  color: #557095;
 }
 
 .sequence-meta strong {
@@ -74,12 +74,12 @@
 }
 
 .sequence-answer {
-  border: 1px solid #cbc5b8;
+  border: 1px solid #bfd2ed;
   border-radius: 12px;
   padding: 12px;
   min-height: 46px;
   text-align: center;
-  background: #fffdf8;
+  background: #ffffff;
   cursor: pointer;
   font-family: inherit;
   font-size: 1rem;
@@ -87,7 +87,7 @@
 }
 
 .sequence-answer:hover:not([disabled]) {
-  border-color: #b2aba0;
+  border-color: #9dbce6;
 }
 
 .sequence-answer.correct {
@@ -96,8 +96,8 @@
 }
 
 .sequence-answer.wrong {
-  background: #ffd9cc;
-  border-color: #e19f88;
+  background: #ffe2df;
+  border-color: #e5a69d;
 }
 
 @media (max-width: 640px) {

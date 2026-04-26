@@ -1,0 +1,65 @@
+.dashboard {
+  margin-top: 24px;
+}
+
+.dashboard h3 {
+  margin: 0 0 12px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-size: 1.3rem;
+  color: #133057;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+
+.dash-card {
+  background: linear-gradient(165deg, rgba(255, 255, 255, 0.93), rgba(236, 244, 255, 0.92));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.dash-label {
+  margin: 0;
+  color: #557095;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+}
+
+.dash-value {
+  margin: 6px 0 0;
+  font-size: 1.35rem;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  color: #163b69;
+}
+
+.achievement-wrap {
+  margin-top: 12px;
+}
+
+.achievement-list {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.achievement-badge {
+  border: 1px solid #bfd1ea;
+  background: #f2f7ff;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  color: #4d6481;
+}
+
+.achievement-badge.unlocked {
+  border-color: #6bb898;
+  background: var(--success-bg);
+  color: var(--success-ink);
+}
