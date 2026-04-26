@@ -7,6 +7,13 @@
   border-radius: 10px;
   cursor: pointer;
   font-size: 1.1rem;
+  transition: transform 140ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.icon-btn:hover {
+  border-color: #9bbce7;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(26, 60, 107, 0.15);
 }
 
 #toggleSidebar {
@@ -44,6 +51,7 @@
   padding: 10px 12px;
   border-radius: 10px;
   font-size: 0.98rem;
+  transition: background-color 160ms ease, transform 140ms ease, color 160ms ease;
 }
 
 .menu-item {
@@ -53,6 +61,7 @@
 .menu-item:hover,
 .submenu-item:hover {
   background: #e8f1ff;
+  transform: translateX(2px);
 }
 
 .menu-item.active {
@@ -98,6 +107,13 @@
   transform: translateY(8px);
   opacity: 0;
   animation: tile-reveal 420ms ease forwards;
+  transition: transform 180ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.module-tile:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--tile-shadow-hover);
+  border-color: #a9c4e8;
 }
 
 .module-tile:nth-child(2) {
@@ -118,7 +134,7 @@
 
 .module-tile h3 {
   margin: 10px 0 8px;
-  font-family: "Bricolage Grotesque", sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.4rem;
 }
 
@@ -144,11 +160,21 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   min-height: 42px;
+  box-shadow: 0 10px 20px rgba(39, 89, 160, 0.22);
+  transition: transform 130ms ease, box-shadow 180ms ease, filter 140ms ease, border-color 160ms ease;
 }
 
 .tile-link:hover,
 .game-btn:hover {
-  filter: brightness(1.03);
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+  box-shadow: 0 14px 24px rgba(39, 89, 160, 0.28);
+}
+
+.tile-link:active,
+.game-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 6px 12px rgba(39, 89, 160, 0.2);
 }
 
 .tile-link.ghost,
@@ -156,6 +182,7 @@
   background: #e4edfb;
   color: #2f4f78;
   border-color: #bfd3ef;
+  box-shadow: none;
 }
 
 .status {

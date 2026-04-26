@@ -20,6 +20,13 @@
   border: 1px solid var(--line);
   border-radius: 14px;
   padding: 12px;
+  transition: transform 170ms ease, box-shadow 190ms ease, border-color 190ms ease;
+}
+
+.dash-card:hover {
+  transform: translateY(-2px);
+  border-color: #a9c4e8;
+  box-shadow: 0 14px 28px rgba(24, 57, 104, 0.14);
 }
 
 .dash-label {
@@ -56,6 +63,11 @@
   padding: 6px 10px;
   font-size: 0.8rem;
   color: #4d6481;
+  transition: transform 140ms ease;
+}
+
+.achievement-badge:hover {
+  transform: translateY(-1px);
 }
 
 .achievement-badge.unlocked {

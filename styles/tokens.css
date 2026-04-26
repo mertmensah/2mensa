@@ -1,4 +1,7 @@
 :root {
+  --font-ui: "Space Grotesk", sans-serif;
+  --font-display: "Cinzel", "Bricolage Grotesque", serif;
+  --font-heading: "Bricolage Grotesque", sans-serif;
   --bg: #eef5ff;
   --ink: #11243d;
   --panel: #f8fbff;
@@ -10,5 +13,9 @@
   --muted: #59708f;
   --success-bg: #d7efe4;
   --success-ink: #1e5f44;
+  --ring: rgba(88, 166, 255, 0.34);
+  --radius-lg: 18px;
+  --radius-md: 12px;
   --tile-shadow: 0 16px 42px rgba(23, 52, 92, 0.12);
+  --tile-shadow-hover: 0 22px 48px rgba(22, 56, 104, 0.18);
 }
